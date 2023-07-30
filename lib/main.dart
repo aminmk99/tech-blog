@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tech_blog/screens/main_screen.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:tech_blog/screens/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
       supportedLocales: [
         Locale('fa'), // Persian
       ],
-      home: MainScreen(),
+      home: SplashScreen(),
     );
   }
 }
