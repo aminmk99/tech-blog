@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tech_blog/screens/main_screen.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:tech_blog/screens/splash_screen.dart';
 

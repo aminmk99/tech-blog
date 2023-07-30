@@ -10,7 +10,7 @@ class MainScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: Center(
-          child: Image.asset(Assets.images.splashScreenImage.path),
+          child: Text('Main Screen'),
         ),
       ),
     );
