@@ -5,6 +5,7 @@ class SolidColors {
   static const Color listTitleClr = Color.fromARGB(255, 64, 4, 87);
   static const Color primaryClr = Color.fromARGB(255, 64, 4, 87);
   static const Color scaffoldBgClr = Color.fromARGB(255, 255, 255, 255);
+  static const Color statusBarClr = Color.fromARGB(255, 255, 255, 255);
   static const Color lightTxt = Color.fromARGB(255, 255, 255, 255);
   static const Color textTitleClr = Color.fromARGB(255, 0, 0, 0);
   static const Color selectedPodcast = Color.fromARGB(255, 255, 139, 26);
