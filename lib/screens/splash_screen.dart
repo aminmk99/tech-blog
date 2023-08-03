@@ -30,22 +30,20 @@ class _SplashScreenState extends State<SplashScreen> {
     print('The size of height is ${size.height}');
     print('The size of width is ${size.width}');
     return Scaffold(
-      body: SafeArea(
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              //logo
-              Image.asset(Assets.images.splashScreenImage.path,
-                  height: size.height / 11.5),
-              SizedBox(height: 32),
-              //spinkit
-              SpinKitFadingCube(
-                color: SolidColors.primaryClr,
-                size: 50.0,
-              ),
-            ],
-          ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            //logo
+            Image.asset(Assets.images.splashScreenImage.path,
+                height: size.height / 11.5),
+            SizedBox(height: 32),
+            //spinkit
+            SpinKitFadingCube(
+              color: SolidColors.primaryClr,
+              size: 50.0,
+            ),
+          ],
         ),
       ),
     );

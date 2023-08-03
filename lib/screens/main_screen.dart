@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tech_blog/widgets/my_appbar.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
@@ -7,8 +8,11 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Center(
-          child: Text('Main Screen'),
+        backgroundColor: Colors.white,
+        body: Column(
+          children: [
+            MyAppBar(),
+          ],
         ),
       ),
     );
