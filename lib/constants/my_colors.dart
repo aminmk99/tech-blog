@@ -8,6 +8,7 @@ class SolidColors {
   static const Color statusBarClr = Color.fromARGB(255, 255, 255, 255);
   static const Color navigationBarClr = Color.fromARGB(255, 255, 255, 255);
   static const Color lightTxt = Color.fromARGB(255, 255, 255, 255);
+  static const Color posterTxt = Color.fromARGB(255, 255, 255, 255);
   static const Color textTitleClr = Color.fromARGB(255, 0, 0, 0);
   static const Color selectedPodcast = Color.fromARGB(255, 255, 139, 26);
   static const Color submitArticle = Color.fromARGB(255, 209, 209, 209);

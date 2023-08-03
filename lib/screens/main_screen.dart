@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tech_blog/widgets/MyAppBar/my_appbar.dart';
+import 'package:tech_blog/widgets/MyAppBar/my_app_bar.dart';
 
 import '../widgets/poster/poster.dart';
 
@@ -9,7 +9,7 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    var sizeBetweenAppBarPoster = size.height/97.6;
+    final sizeBetweenAppBarPoster = size.height/97.6;
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.white,
