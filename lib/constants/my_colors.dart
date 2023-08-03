@@ -25,4 +25,10 @@ class GradientColors {
     const Color.fromARGB(255, 0, 0, 0),
     const Color.fromARGB(255, 63, 63, 63),
   ];
+
+  static const List<Color> posterCover = [
+    const Color.fromARGB(0, 0, 0, 0),
+    const Color.fromARGB(195, 72, 20, 88),
+    const Color.fromARGB(255, 28, 20, 81),
+  ];
 }

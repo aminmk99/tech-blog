@@ -10,8 +10,6 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     var sizeBetweenAppBarPoster = size.height/97.6;
-    print(size.height);
-    print(size.width);
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.white,
