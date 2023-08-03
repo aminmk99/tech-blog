@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tech_blog/widgets/my_appbar.dart';
+import 'package:tech_blog/widgets/MyAppBar/my_appbar.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});

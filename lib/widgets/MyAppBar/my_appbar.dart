@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tech_blog/widgets/top_icons.dart';
-import '../gen/assets.gen.dart';
+import 'package:tech_blog/widgets/MyAppBar/top_icons.dart';
+import '../../gen/assets.gen.dart';
 
 
 class MyAppBar extends StatelessWidget {
