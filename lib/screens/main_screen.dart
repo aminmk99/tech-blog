@@ -39,18 +39,22 @@ class MainScreen extends StatelessWidget {
             ),
             const SizedBox(height: 32),
             _mostHotTitle(bodyMargin),
-            SizedBox(
-              height: size.height / 3.5,
-              child: ListView.builder(
-                itemCount: blogList.length,
-                scrollDirection: Axis.horizontal,
-                itemBuilder: ((context, index) => BlogsList(
-                      bodyMargin: bodyMargin,
-                      index: index,
-                      size: size,
-                    )),
+            Container(
+              color: Colors.red,
+              child: SizedBox(
+                height: size.height / 3.5,
+                child: ListView.builder(
+                  itemCount: blogList.length,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: ((context, index) => BlogsList(
+                        bodyMargin: bodyMargin,
+                        index: index,
+                        size: size,
+                      )),
+                ),
               ),
             ),
+            const SizedBox(height: 32),
           ],
         ),
       ),

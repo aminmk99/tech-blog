@@ -1,0 +1,60 @@
+import 'package:tech_blog/models/podcast_model.dart';
+
+List<PodcastModel> podcastList = [
+  PodcastModel(
+    id: 1,
+    title: 'رمزون',
+    podcaster: 'رضا شفیعی جم',
+    podcastPosterUrl: 'https://img.freepik.com/free-vector/podcast-social-media-post-template_47987-2238.jpg',
+    date: 'سه هفته پیش',
+    listeners: 12,
+  ),
+  PodcastModel(
+    id: 2,
+    title: 'رادیو کدیاد',
+    podcaster: 'میلاد ده یامی',
+    podcastPosterUrl: 'https://d1csarkz8obe9u.cloudfront.net/posterpreviews/podcast-poster-design-template-4c974305a48b3bee9dbcd93d0fb2d1fa_screen.jpg?ts=1622641578',
+    date: 'ده دقیقه قبل',
+    listeners: 12,
+  ),
+  PodcastModel(
+    id: 3,
+    title: 'تکنو کست',
+    podcaster: 'شقایق فراهانی',
+    podcastPosterUrl: 'https://s3.castbox.fm/5a/c2/07/80f5e5498fb4657864be724faa.jpg',
+    date: 'سه روز پیش',
+    listeners: 12,
+  ),
+  PodcastModel(
+    id: 4,
+    title: 'پادی کست',
+    podcaster: 'الناز النازی',
+    podcastPosterUrl: 'https://api2.zoomit.ir/media/2021-6-podcast-638bb4efb90c494dc77f57d0',
+    date: 'پنج ساعت پیش',
+    listeners: 12,
+  ),
+  PodcastModel(
+    id: 5,
+    title: 'بی‌پلاس',
+    podcaster: 'علی بندری',
+    podcastPosterUrl: 'https://bpluspodcast.com/wp-content/uploads/2018/05/itunes-covers-01.png',
+    date: 'یک هفته پیش',
+    listeners: 12,
+  ),
+  PodcastModel(
+    id: 6,
+    title: 'فلاتر چیست و چرا؟',
+    podcaster: 'ساسان صفری',
+    podcastPosterUrl: 'https://sariasan.com/wp-content/uploads/2022/09/word-image-80070-1.jpeg',
+    date: 'دو ماه پیش',
+    listeners: 12,
+  ),
+  PodcastModel(
+    id: 7,
+    title: 'امنیت و هوش مصنوعی',
+    podcaster: 'امین میرزاکوچکی',
+    podcastPosterUrl: 'https://media.geeksforgeeks.org/wp-content/cdn-uploads/20201210221120/Top-5-Applications-of-Machine-Learning-in-Cyber-Security1.jpg',
+    date: 'یک ساعت پیش',
+    listeners: 1800,
+  ),
+];
