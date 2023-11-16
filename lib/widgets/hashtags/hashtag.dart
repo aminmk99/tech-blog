@@ -29,13 +29,13 @@ class HashtagWidget extends StatelessWidget {
           padding: const EdgeInsetsDirectional.only(start: 10, end: 25),
           child: Row(
             children: [
-              ImageIcon(
+              const ImageIcon(
                 AssetImage("assets/icons/hashtagicon.png"),
                 size: 14,
                 color: Colors.white,
               ),
-              SizedBox(width: 12),
-              Text(tagList[index].title, style: TextStyle(color: Colors.white))
+              const SizedBox(width: 12),
+              Text(tagList[index].title, style: const TextStyle(color: Colors.white))
             ],
           ),
         ),

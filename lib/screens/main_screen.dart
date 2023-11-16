@@ -21,76 +21,129 @@ class MainScreen extends StatelessWidget {
     final sizeBetweenAppBarPoster = size.height / 50;
     final bodyMargin = size.width / 10;
     return Scaffold(
-      appBar: AppBar(
-        // elevation: 0,
+        appBar: AppBar(
+          // elevation: 0,
+          backgroundColor: Colors.white,
+          title: const MyAppBar(),
+        ),
         backgroundColor: Colors.white,
-        title: const MyAppBar(),
-      ),
-      backgroundColor: Colors.white,
-      body: SingleChildScrollView(
-        child: Column(
+        body: Stack(
           children: [
-            SizedBox(height: sizeBetweenAppBarPoster),
-            const Poster(),
-            const SizedBox(height: 50),
-            SizedBox(
-              height: 56,
-              child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: tagList.length,
-                itemBuilder: ((context, index) => HashtagWidget(
-                      index: index,
-                      bodyMargin: bodyMargin,
-                    )),
+            SingleChildScrollView(
+              child: Column(
+                children: [
+                  SizedBox(height: sizeBetweenAppBarPoster),
+                  const Poster(),
+                  const SizedBox(height: 50),
+                  SizedBox(
+                    height: 56,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: tagList.length,
+                      itemBuilder: ((context, index) => HashtagWidget(
+                            index: index,
+                            bodyMargin: bodyMargin,
+                          )),
+                    ),
+                  ),
+                  const SizedBox(height: 32),
+                  MostHotTitle(
+                    bodyMargin: bodyMargin,
+                    iconAddress: 'assets/icons/bluepen.png',
+                    title: MyStrings.viewMostHottestEssays,
+                  ),
+                  SizedBox(
+                    height: size.height / 3.5,
+                    child: ListView.builder(
+                      itemCount: blogList.length,
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: ((context, index) => BlogsList(
+                            bodyMargin: bodyMargin,
+                            index: index,
+                            size: size,
+                          )),
+                    ),
+                  ),
+                  const SizedBox(height: 32),
+                  MostHotTitle(
+                    bodyMargin: bodyMargin,
+                    iconAddress: 'assets/icons/mic.png',
+                    title: MyStrings.viewMostHottestPodcasts,
+                  ),
+                  SizedBox(
+                    height: size.height / 3.5,
+                    child: ListView.builder(
+                      itemCount: podcastList.length,
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: ((context, index) => PodcastsList(
+                            bodyMargin: bodyMargin,
+                            index: index,
+                            size: size,
+                          )),
+                    ),
+                  ),
+                ],
               ),
             ),
-            const SizedBox(height: 32),
-            MostHotTitle(
-              bodyMargin: bodyMargin,
-              iconAddress: 'assets/icons/bluepen.png',
-              title: MyStrings.viewMostHottestEssays,
-            ),
-            SizedBox(
-              height: size.height / 3.5,
-              child: ListView.builder(
-                itemCount: blogList.length,
-                scrollDirection: Axis.horizontal,
-                itemBuilder: ((context, index) => BlogsList(
-                      bodyMargin: bodyMargin,
-                      index: index,
-                      size: size,
-                    )),
-              ),
-            ),
-            const SizedBox(height: 32),
-            MostHotTitle(
-              bodyMargin: bodyMargin,
-              iconAddress: 'assets/icons/mic.png',
-              title: MyStrings.viewMostHottestPodcasts,
-            ),
-            SizedBox(
-              height: size.height / 3.5,
-              child: ListView.builder(
-                itemCount: podcastList.length,
-                scrollDirection: Axis.horizontal,
-                itemBuilder: ((context, index) => PodcastsList(
-                      bodyMargin: bodyMargin,
-                      index: index,
-                      size: size,
-                    )),
+            Positioned(
+              bottom: 0,
+              right: 0,
+              left: 0,
+              child: Container(
+                height: size.height / 10,
+                decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: GradientColors.bottomNavBg,
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                  ),
+                ),
+                child: Center(
+                  child: Container(
+                    height: size.height / 12,
+                    margin: const EdgeInsetsDirectional.symmetric(horizontal: 50),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      gradient: const LinearGradient(
+                        colors: GradientColors.bottomNav,
+                        begin: Alignment.centerLeft,
+                        end: Alignment.centerRight,
+                      ),
+                    ),
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 15),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          IconButton(
+                            onPressed: () {},
+                            icon: const ImageIcon(
+                              AssetImage('assets/icons/home.png'),
+                              color: Colors.white,
+                            ),
+                          ),
+                          IconButton(
+                            onPressed: () {},
+                            icon: const ImageIcon(
+                              AssetImage('assets/icons/wing.png'),
+                              color: Colors.white,
+                            ),
+                          ),
+                          IconButton(
+                            onPressed: () {},
+                            icon: const ImageIcon(
+                              AssetImage('assets/icons/user.png'),
+                              color: Colors.white,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
               ),
             ),
           ],
-        ),
-      ),
-      bottomNavigationBar: Container(
-        height: size.height / 10,
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: GradientColors.bottomNavBg,
-          ),
-        ),
-      ),
-    );
+        ));
   }
 }
