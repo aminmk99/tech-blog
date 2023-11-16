@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../Data/poster.dart';
 import '../../constants/my_colors.dart';
-import '../../models/fake_data.dart';
 
 class PosterImage extends StatelessWidget {
   const PosterImage({super.key});

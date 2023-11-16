@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../Data/tags_list.dart';
 import '../../constants/my_colors.dart';
-import '../../models/fake_data.dart';
 
 class HashtagWidget extends StatelessWidget {
   final int index;
@@ -13,11 +13,11 @@ class HashtagWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.fromLTRB(
-        index == tagList.length - 1 ? bodyMargin : 0,
-        8,
-        index == 0 ? bodyMargin : 15,
-        8,
+      padding: EdgeInsets.only(
+        left: index == tagList.length - 1 ? bodyMargin : 0,
+        top: 8,
+        right: index == 0 ? bodyMargin : 15,
+        bottom: 8,
       ),
       child: Container(
         height: 56,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tech_blog/models/fake_data.dart';
 import 'package:tech_blog/widgets/poster/my_texts.dart';
+
+import '../../Data/poster.dart';
 
 class PosterTexts extends StatelessWidget {
   const PosterTexts({super.key});

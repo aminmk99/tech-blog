@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:tech_blog/constants/my_colors.dart';
-import 'package:tech_blog/models/fake_data.dart';
 import 'package:tech_blog/widgets/hashtags/hashtag.dart';
 import 'package:tech_blog/widgets/my_app_bar/my_app_bar.dart';
 
+import '../Data/blog_list.dart';
+import '../Data/tags_list.dart';
 import '../constants/my_strings.dart';
 import '../widgets/blogs_list/blogs_list.dart';
 import '../widgets/poster/poster.dart';
