@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tech_blog/constants/my_colors.dart';
+import 'package:tech_blog/constants/components/most_hot_title.dart';
 import 'package:tech_blog/widgets/hashtags/hashtag.dart';
 import 'package:tech_blog/widgets/my_app_bar/my_app_bar.dart';
 
@@ -20,28 +20,31 @@ class MainScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.white,
-        body: Column(
-          children: [
-            const MyAppBar(),
-            SizedBox(height: sizeBetweenAppBarPoster),
-            const Poster(),
-            const SizedBox(height: 50),
-            SizedBox(
-              height: 56,
-              child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: tagList.length,
-                itemBuilder: ((context, index) => HashtagWidget(
-                      index: index,
-                      bodyMargin: bodyMargin,
-                    )),
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              const MyAppBar(),
+              SizedBox(height: sizeBetweenAppBarPoster),
+              const Poster(),
+              const SizedBox(height: 50),
+              SizedBox(
+                height: 56,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: tagList.length,
+                  itemBuilder: ((context, index) => HashtagWidget(
+                        index: index,
+                        bodyMargin: bodyMargin,
+                      )),
+                ),
               ),
-            ),
-            const SizedBox(height: 32),
-            _mostHotTitle(bodyMargin),
-            Container(
-              color: Colors.red,
-              child: SizedBox(
+              const SizedBox(height: 32),
+              MostHotTitle(
+                bodyMargin: bodyMargin,
+                iconAddress: 'assets/icons/bluepen.png',
+                title: MyStrings.viewMostHottestEssays,
+              ),
+              SizedBox(
                 height: size.height / 3.5,
                 child: ListView.builder(
                   itemCount: blogList.length,
@@ -53,37 +56,29 @@ class MainScreen extends StatelessWidget {
                       )),
                 ),
               ),
-            ),
-            const SizedBox(height: 32),
-          ],
+              const SizedBox(height: 32),
+              MostHotTitle(
+                bodyMargin: bodyMargin,
+                iconAddress: 'assets/icons/mic.png',
+                title: MyStrings.viewMostHottestPodcasts,
+              ),
+              // SizedBox(
+              //   height: size.height / 3.5,
+              //   child: ListView.builder(
+              //     itemCount: podcastList.length,
+              //     scrollDirection: Axis.horizontal,
+              //     itemBuilder: ((context, index) => ItemsList(
+              //           bodyMargin: bodyMargin,
+              //           index: index,
+              //           size: size,
+
+              //         )),
+              //   ),
+              // ),
+            ],
+          ),
         ),
       ),
     );
   }
-}
-
-Widget _mostHotTitle(double bodyMargin) {
-  return Builder(
-    builder: (context) => Padding(
-      padding: EdgeInsetsDirectional.only(start: bodyMargin, bottom: 10),
-      child: Row(
-        children: [
-          ImageIcon(
-            AssetImage('assets/icons/bluepen.png'),
-            size: 20,
-            color: SolidColors.bluePenIcon,
-          ),
-          const SizedBox(width: 15),
-          Text(
-            MyStrings.viewMostHottestEssays,
-            style: TextStyle(
-              color: SolidColors.titleClr,
-              fontSize: 18,
-              fontWeight: FontWeight.w700,
-            ),
-          )
-        ],
-      ),
-    ),
-  );
 }
