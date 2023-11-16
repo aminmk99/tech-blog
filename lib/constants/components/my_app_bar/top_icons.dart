@@ -11,6 +11,7 @@ class TopIcons extends StatelessWidget {
     return Icon(
       icon,
       size: size,
+      color: Colors.black,
     );
   }
 }
