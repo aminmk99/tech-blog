@@ -5,8 +5,7 @@ import 'package:tech_blog/constants/my_colors.dart';
 import 'package:tech_blog/screens/splash_screen.dart';
 
 void main() {
-
-  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     statusBarColor: SolidColors.statusBarClr,
     statusBarIconBrightness: Brightness.dark,
     systemNavigationBarColor: Colors.white,
@@ -21,7 +20,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       localizationsDelegates: [
         GlobalMaterialLocalizations.delegate,

@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:tech_blog/constants/my_colors.dart';
 
 class MyTexts extends StatelessWidget {
-  MyTexts({
+  const MyTexts({
+    super.key,
     required this.text,
     required this.fontSize,
     required this.fontWeight,
@@ -16,7 +17,10 @@ class MyTexts extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: TextStyle(color: SolidColors.posterTxt, fontSize: fontSize, fontWeight: fontWeight),
+      style: TextStyle(
+          color: SolidColors.posterTxt,
+          fontSize: fontSize,
+          fontWeight: fontWeight),
     );
   }
 }

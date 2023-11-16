@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tech_blog/models/fake_data.dart';
 import 'package:tech_blog/widgets/poster/my_texts.dart';
 
 class PosterTexts extends StatelessWidget {
@@ -18,13 +19,22 @@ class PosterTexts extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             MyTexts(
-                text: 'امین عزیز - یک روز پیش',
-                fontSize: littleFontSize,
-                fontWeight: littleFontWeight),
-            MyTexts(
-              text: 'Like 999',
+              text:
+                  "${homePagePosterMap['writer']} - ${homePagePosterMap['date']}",
               fontSize: littleFontSize,
               fontWeight: littleFontWeight,
+            ),
+            Row(
+              children: [
+                MyTexts(
+                  text: homePagePosterMap['view'],
+                  fontSize: littleFontSize,
+                  fontWeight: littleFontWeight,
+                ),
+                const SizedBox(width: 8),
+                const Icon(Icons.remove_red_eye_sharp,
+                    color: Colors.white, size: 20)
+              ],
             )
           ],
         ),
